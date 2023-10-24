@@ -25,4 +25,4 @@ vim.keymap.set(
 )
 
 vim.keymap.set("n", "<leader>ss", ":w<CR>", { noremap = true, silent = true, desc = "Write to file" })
-vim.keymap.set("n", "<leader>ww", ":q<CR>", { noremap = true, silent = true, desc = "Write to file" })
+vim.keymap.set("n", "<leader>ww", ":bd<CR>", { noremap = true, silent = true, desc = "Write to file" })
