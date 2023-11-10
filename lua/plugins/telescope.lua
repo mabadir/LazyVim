@@ -4,7 +4,6 @@ return {
     {
       "<leader><space>",
       function()
-        local action_state = require("telescope.actions.state")
         require("telescope.builtin").find_files({ cwd = false })
       end,
       desc = "Find Files",
@@ -12,8 +11,11 @@ return {
     {
       "<leader>ff",
       function()
-        local action_state = require("telescope.actions.state")
-        require("telescope.builtin").find_files({ no_ignore = true, hidden = true })
+        require("telescope.builtin").find_files({
+          no_ignore = true,
+          hidden = true,
+          file_ignore_patterns = { "node_modules/.*" },
+        })
       end,
       desc = "Find All Files",
     },
